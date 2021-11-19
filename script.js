@@ -45,9 +45,13 @@ function setTime() {
     const minutes = time.getMinutes();
     const seconds = time.getSeconds();
 
-    hourEl.style.transform = `translate(-50%, -100%) rotate(${
-        scale(hours, 0, 11, 0, 360) - 55
-    }deg)`;
+    hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+        hours % 12,
+        0,
+        11,
+        0,
+        360
+    )}deg)`;
     minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(
         minutes,
         0,
